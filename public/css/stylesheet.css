@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  /* color: white; */
+  
+}
+
+/* Navbar start*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding-top: 25px;
+  color: white;
+  font-weight: 500;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: greenyellow;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid white;
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(0.6);
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+.logo span {
+  color: rgb(44, 199, 27);
+}
+
+.logo {
+  color: white;
+}
+/* Navbar end */
+
+/* Hero  section */
+.Hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url(/gambar/Logo.jpg) no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 25, 25, 0.5);
+}
+
+.Text {
+  position: relative;
+  color: white;
+  z-index: 15;
+}
+
+.Text h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.Text h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* Laporan & formulir*/
+.laporan {
+  padding: 6rem 7% 1.4rem;
+  /* text-align: center; */
+}
+
+.paragraf {
+  text-align: center;
+}
+
+.laporan h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.laporan h2 span {
+  color: rgb(44, 199, 27);
+}
+
+.formulir {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgb(44, 199, 27);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: #00b300;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #087608;
+}
+
+.Laporanterkirim {
+  margin-top: 30px;
+}
+
+.daftar {
+  list-style: none;
+  padding: 0;
+}
+
+.daftar li {
+  background: #e6ffe6;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+/* Daur Ulang */
+.pgrd {
+  padding: 6rem 7% 1.4rem;
+}
+
+.pgrd h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.pgrd h2 span {
+  color: rgb(44, 199, 27);
+}
+.njay{
+  box-shadow: 2px 2px 10px rgb(44, 199, 27);
+}
+
+/* //dropdown */
+ul.dropdown-menu {
+  background-color:  rgba(0, 0, 0, 0.7);
+}
+  a.nav-link{
+    color: white;
+  }
+  a.nav-link:hover{
+    color:greenyellow;
+    text-underline-position: auto;
+  }
+
+li.dropdown-divider{
+  color: greenyellow;
+}
+
+
+/* contct */
+.contact {
+  padding: 6rem 7% 1.4rem;
+}
+
+.contact h2 {
+  text-align: center;
+  /* margin-bottom: 0.5rem; */
+}
+
+.contact h2 span {
+  color: rgb(44, 199, 27);
+}
+.container {
+  width: 85%;
+  margin: auto;
+  background: white;
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(44, 199, 27);
+}
+
+.sosialmedia img,
+.Kontak img {
+  width: 30px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.sesi-kontak {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Map {
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 2px solid green;
+  text-align: center;
+}
+
+.Kontak,
+.sosialmedia {
+  width: 30%;
+}
+
+.Kontak p {
+  display: flex;
+  align-items: center;
+}
+
+/* Button */
+.cont {
+  display: flex;
+  align-items: center;
+  
+  background-color: #ffffff;
+}
+
+.fancy-button {
+  padding: 7px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #34eb27, #37ba3e);
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.fancy-button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+  );
+  transition: 0.5s;
+}
+
+.fancy-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, #4ddb2d, #41d13e);
+}
+
+.fancy-button:hover:before {
+  left: 100%;
+}
+
+.fancy-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
