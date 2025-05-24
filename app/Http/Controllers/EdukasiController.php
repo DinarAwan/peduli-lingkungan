@@ -12,7 +12,6 @@ class EdukasiController extends Controller
      */
     public function index()
     {
-        $data = Edukasi::all();
         $data = Edukasi::orderBy('id', 'asc')->paginate(3);
         return view('edukasi/index')->with('data', $data);
     }
@@ -88,4 +87,6 @@ class EdukasiController extends Controller
     {
         //
     }
+
+    
 }

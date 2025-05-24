@@ -14,27 +14,29 @@ class TestSendingEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $user;
+    public $subjectLine;
+    public $bodyContent;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($user)
+    public function __construct( string $subjectLine, $bodyContent)
     {
-        $this->user = $user;
+        $this->subjectLine = $subjectLine;
+        $this->bodyContent = $bodyContent;
     }
 
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
-    {
+    public function envelope(): Envelope{
+
         return new Envelope(
             from: new Address('aaa@mail.com', 'Dinar'),
             replyTo: [
                 new Address('bbb@mail.com', 'bbb')
             ],
-            subject: 'Test Sending Email',
+            subject: $this->subjectLine,
         );
     }
     /**
@@ -43,7 +45,11 @@ class TestSendingEmail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'sendEmail.index',
+            view: 'sendEmail.temlate', // Buat view terpisah jika perlu
+            with: [
+                'subjectLine' => $this->subjectLine,
+                'bodyContent' => $this->bodyContent
+            ],
         );
     }
 

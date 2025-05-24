@@ -16,12 +16,13 @@ use App\Http\Controllers\EdukasiDashboardController;
 //     return view('welcome');
 // });
 
-Route::get('/', [DashboardController::class, 'index']);
+Route::get('untukPengguna', [DashboardController::class, 'index']);
 
 Route::resource('laporan', LaporanController::class);
 
     
 Route::resource('/', DaurController::class);
+
 Route::resource('admin', AdmindaurController::class);
 Route::resource('langkah', DaurController::class);
 

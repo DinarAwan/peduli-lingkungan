@@ -4,7 +4,7 @@
 
 <section id="laporan" class="laporan">
 
-<p>{{$data->isi}}</p>
+
 
 </section>
 

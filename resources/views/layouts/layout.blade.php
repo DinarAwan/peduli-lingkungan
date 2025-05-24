@@ -61,10 +61,11 @@
           <li><a href="#" class="aktif"></a></li>
           <li><a href="/#">Home</a></li>
           <li><a href="/#Program">Program Daur Ulang</a></li>
-          <li><a href="/#Edukasi">Edukasi</a></li>
           <li><a href="/#laporan">Laporan</a></li>
           <li><a href="/#kontak">Kontak</a></li>
           <li><a href="/carbon">Emisi</a></li>
+          <li><a href="/untukPengguna">Edukasi</a></li>
+
           
           @if(Auth::check())
           @if(Auth::user()->role == 'admin')
@@ -78,6 +79,7 @@
                   <li><a href="/admin">Rincian</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a href="/edukasi">Edukasi For Admin</a></li>
+                  <li><a href="/kirim-email">Kirim Email</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a href="/sesi/logout">Logout</a></li>   
                 </ul>
